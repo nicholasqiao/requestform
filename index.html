@@ -1,0 +1,79 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="css/semantic.min.js"></script>
+	<script src="js/newentry.js"></script>
+	
+
+</head>
+
+<body>
+	<div class="ui container">
+		<h1>Request Form</h1>
+		<div class="ui segment" id="main-container">
+			<div class="ui form" id="requestform">
+				<div  id="entries">
+						<div class="three fields">
+							<div class="required field">
+								<label>Machine/Model</label>
+								<div id="machinetype" class="ui selection dropdown machinetypes">
+									<div class="default text">Machine Type</div>
+									<i class="dropdown icon"></i>
+									<div class="menu">
+										<div class="item" data-value="val">
+											value title
+										</div>
+										<div class="item" data-value="val">
+											value title
+										</div>
+										<div class="item" data-value="val">
+											value title
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="required field">
+								<label>Serial Number/UUID</label>
+								<input type="text" id="serialnumber" placeholder="Serial Number/UUID" data-value="serialnumber" class="serialnumbers">
+							</div>
+							
+							<div class="required field">
+								<label>Key Type</label>
+								<select name="Key Type" class="ui selection dropdown keytypes">
+								<option value="">Key Type</option>
+								<option value="rel" selected>Release Key</option>
+								<option value="dev">Devleoper Key</option>
+								</select>
+							</div>
+						</div>
+					<!-- </div> for template div -->
+				</div>
+				<button class="ui blue button" id="newentry">New Entry</button>
+				<p></p>
+				
+				<div class="required field">
+					<label>Comments:</label>
+					<input type="text" id="comments" placeholder="Customer name..." data-value="comments" class="comments">
+				</div>
+				<div class="field">
+					<label>Emails to Notify (Separate with commas)</label>
+					<input type="text" id="emails" placeholder="Emails" data-value="emails" class="emails">
+				</div>
+				
+				<button class="ui green button submit" id="submit" type="button">Submit</button>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		$('.ui.dropdown')
+		.dropdown()
+		;
+	</script>
+	<script src="js/returndata.js"></script>
+	<script src="css/semantic.min.js"></script>
+</body>
+</html>
